@@ -1,0 +1,14 @@
+.morningCards {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.morningTodo {
+  color: rgb(124, 123, 123);
+  height: 10%;
+  width: 80%;
+  background-color: rgb(250, 228, 195);
+  padding: 5px;
+  border-radius: 4px;
+}

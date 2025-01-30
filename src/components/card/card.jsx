@@ -2,6 +2,6 @@
 import "./card.css";
 
 const Card = (title) => {
-  return <div>{title}</div>;
+  return <div className="unedCard">{title}</div>;
 };
 export default Card;
