@@ -5,6 +5,7 @@ import "./board.css";
 
 import MorningBoard from "../morningBoard/morningBoard";
 import EveningBoard from "../eveningBoard/eveningBoard";
+import DailyTasks from "../dailyTasks/dailyTasks";
 
 const Board = () => {
   return (
@@ -14,6 +15,7 @@ const Board = () => {
       </div>
       <div className="dailyTaskBoard">
         <MorningBoard />
+        <DailyTasks />
         <EveningBoard />
       </div>
     </div>
