@@ -5,10 +5,16 @@
 }
 
 .morningTodo {
-  color: rgb(124, 123, 123);
-  height: 10%;
-  width: 80%;
-  background-color: rgb(250, 228, 195);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(82, 82, 82);
+  font-size: 18px;
+  text-align: center;
+  padding: 20px 5px;
+  height: 50px;
+  width: 100%;
+  background-color: #ffcd29;
   padding: 5px;
   border-radius: 4px;
 }
