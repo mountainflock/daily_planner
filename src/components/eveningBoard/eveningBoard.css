@@ -1,0 +1,19 @@
+.eveningCards {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  gap: 10px;
+}
+
+.eveningTodo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(61, 60, 60);
+  font-size: 18px;
+  height: 50px;
+  width: 100%;
+  background-color: #e4ccff;
+  padding: 5px;
+  border-radius: 4px;
+}

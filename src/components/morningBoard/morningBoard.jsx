@@ -1,6 +1,6 @@
 import "./morningBoard.css";
 
-const CardList = () => {
+const MorningCardList = () => {
   const morningTodos = [
     "Пробуждение",
     "Вода",
@@ -29,4 +29,4 @@ const CardList = () => {
   );
 };
 
-export default CardList;
+export default MorningCardList;

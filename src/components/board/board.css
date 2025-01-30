@@ -1,5 +1,11 @@
-* {
+/* * {
   display: flex;
+} */
+
+.dailyTaskBoard {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
 }
 
 .title {
