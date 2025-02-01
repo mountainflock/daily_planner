@@ -9,7 +9,7 @@ import DailyTasks from "../dailyTasks/dailyTasks";
 
 const Board = () => {
   return (
-    <div className="board">
+    <div className={"board"}>
       {/* <div className="title">
         <h2 className="mainTitle">Daily planner</h2>
       </div> */}
