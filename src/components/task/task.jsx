@@ -1,4 +1,4 @@
 const Task = (title) => {
-  return <div>{title}</div>;
+  return <div>{title.title}</div>;
 };
 export default Task;
