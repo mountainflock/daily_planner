@@ -1,4 +1,5 @@
 import "./dailyTasks.css";
+import Task from "../task/task";
 // import Task from "../task/task";
 // import { useState } from "react";
 
@@ -9,7 +10,7 @@ const DailyTasks = () => {
     <div className="dailyTasks">
       <h3>Задачи на день</h3>
       {dailyTasks.map((task, i) => (
-        <div key={dailyTasks[i]}>{task}</div>
+        <Task key={i} title={task} />
       ))}
     </div>
   );
