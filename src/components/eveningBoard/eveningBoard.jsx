@@ -1,4 +1,5 @@
 import "./eveningBoard.css";
+import arrow from "../../assets/arrow.svg";
 
 const EveningCardList = () => {
   const eveningTodos = [
@@ -14,9 +15,12 @@ const EveningCardList = () => {
   return (
     <div className="eveningCards">
       {eveningTodos.map((todo, i) => (
-        <div className="eveningTodo" key={eveningTodos[i]}>
-          {todo}
-        </div>
+        <>
+          <div className="eveningTodo" key={eveningTodos[i]}>
+            {todo}
+          </div>
+          {i < eveningTodos.length - 1 && <img src={arrow} alt="" />}
+        </>
       ))}
     </div>
   );

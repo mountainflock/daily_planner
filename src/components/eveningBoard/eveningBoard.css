@@ -1,12 +1,14 @@
 .eveningCards {
   display: flex;
-  flex-direction: column;
-  width: 50%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
   gap: 10px;
 }
 
 .eveningTodo {
   display: flex;
+
   align-items: center;
   justify-content: center;
   color: rgb(61, 60, 60);
