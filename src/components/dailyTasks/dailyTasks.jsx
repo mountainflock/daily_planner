@@ -23,7 +23,7 @@ const DailyTasks = () => {
 
   return (
     <div className="dailyTasks">
-      <h4>Задачи на день</h4>
+      <p>Задачи на день</p>
       {dailyTasks.map((task, i) => (
         <div
           key={i}
