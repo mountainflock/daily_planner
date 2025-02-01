@@ -11,7 +11,7 @@ const Board = () => {
   return (
     <div className="board">
       <div className="title">
-        <h2 className="mainTitle">Daily planner</h2>
+        {/* <h2 className="mainTitle">Daily planner</h2> */}
       </div>
       <div className="dailyTaskBoard">
         <MorningBoard />
