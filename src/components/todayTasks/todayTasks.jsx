@@ -1,7 +1,7 @@
-import "./dailyTasks.css";
 import radioButtonUnchecked from "../../assets/radioButtonUnchecked.svg";
 import radioButtonChecked from "../../assets/radioButtonChecked.svg";
-
+import add from "../../assets/add.svg";
+import "./todayTasks.css";
 import { useState } from "react";
 
 const DailyTasks = () => {
@@ -28,16 +28,27 @@ const DailyTasks = () => {
         <div
           key={i}
           className={task.isDone === false ? "incompleteTask" : "completeTask"}
-          onClick={() => toggleTaskStatus(task.id)}
         >
           {task.isDone === true ? (
-            <img src={radioButtonChecked} alt="" />
+            <img
+              src={radioButtonChecked}
+              alt=""
+              onClick={() => toggleTaskStatus(task.id)}
+            />
           ) : (
-            <img src={radioButtonUnchecked} alt="" />
+            <img
+              src={radioButtonUnchecked}
+              alt=""
+              onClick={() => toggleTaskStatus(task.id)}
+            />
           )}
-          <span className="taskTitle">{task.title}</span>
+          <div className="taskTitle">{task.title}</div>
         </div>
       ))}
+      <div className="taskButtons">
+        <button className="addButton">{<img src={add} alt="" />}</button>
+        <button className="deleteCompletedButton">удалить завершенные</button>
+      </div>
     </div>
   );
 };

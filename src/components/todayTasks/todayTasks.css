@@ -1,0 +1,88 @@
+p {
+  margin: 6px auto;
+  padding: 0;
+  font-size: 22px;
+}
+
+.dailyTasks {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  height: 80%;
+  color: rgb(81, 81, 81);
+  text-align: left;
+  padding: 15px;
+  background-color: antiquewhite;
+  gap: 8px;
+  border-radius: 4px;
+}
+
+.completeTask,
+.incompleteTask {
+  display: flex;
+  text-align: flex-start;
+  margin-left: 6px;
+  flex-wrap: nowrap;
+}
+
+.completeTask:hover,
+.incompleteTask:hover {
+  font-weight: bold;
+  cursor: default;
+}
+
+.taskTitle {
+  display: flex;
+  text-overflow: ellipsis;
+  margin-left: 6px;
+  font-size: 18px;
+}
+
+.completeTask {
+  text-decoration: line-through;
+}
+
+.addButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10px;
+  height: 10px;
+  background-color: antiquewhite;
+  margin: 12px 12px 10px 12px;
+  border: none;
+  padding: 0;
+}
+
+.addButton:hover {
+}
+
+.addButton:active {
+  visibility: hidden;
+}
+
+.taskButtons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.deleteCompletedButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 160px;
+  height: 26px;
+  color: black;
+  background-color: antiquewhite;
+  border: none;
+  font-size: 14px;
+}
+
+.deleteCompletedButton:hover {
+  visibility: visible;
+}
+
+.deleteCompletedButton:active {
+  visibility: hidden;
+}
