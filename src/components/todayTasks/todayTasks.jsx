@@ -6,11 +6,11 @@ import { useState } from "react";
 
 const DailyTasks = () => {
   const [dailyTasks, setDailyTasks] = useState([
-    { id: 0, title: "Учеба", isDone: false },
-    { id: 1, title: "Отдых", isDone: false },
-    { id: 2, title: "Заказать корм мышам", isDone: false },
-    { id: 3, title: "Забрать заказ Озон", isDone: false },
-    { id: 4, title: "Подрезать цветы", isDone: false },
+    { id: 0, title: "Task 1", isDone: false },
+    { id: 1, title: "Task 2", isDone: false },
+    { id: 2, title: "Task 3", isDone: false },
+    { id: 3, title: "Task 4", isDone: false },
+    { id: 4, title: "Task 5", isDone: false },
   ]);
 
   const toggleTaskStatus = (id) => {

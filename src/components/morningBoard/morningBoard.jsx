@@ -1,34 +1,58 @@
 import "./morningBoard.css";
 import arrow from "../../assets/arrow.svg";
+import add from "../../assets/add.svg";
+import Input from "../input/input";
+
+import { useState } from "react";
 
 const MorningCardList = () => {
-  const morningTodos = [
-    "Пробуждение",
-    "Вода",
-    "6 минут",
-    "Молитва",
-    "Фото",
-    "Постель",
-    "Переодеваюсь",
-    "Умываюсь",
-    "Зарядка",
-    "Завтрак",
-    "Душ",
-    "Ревитоника",
-    "Отдых, медитация",
-    "Планер",
-  ];
+  // const [morningTasks, setMorningTasks] = useState(savedTasks);
+  const [inputIsOpen, setInputIsOpen] = useState(false);
+  const morningTasks = ["Пробуждение"];
+
+  // "Вода",
+  //   "6 минут",
+  //   "Молитва",
+  //   "Фото",
+  //   "Постель",
+  //   "Переодеваюсь",
+  //   "Умываюсь",
+  //   "Зарядка",
+  //   "Завтрак",
+  //   "Душ",
+  //   "Ревитоника",
+  //   "Отдых, медитация",
+  //   "Планер",
+
+  localStorage.setItem("morningTasks", JSON.stringify(morningTasks));
+  const savedTasks = JSON.parse(localStorage.getItem("morningTasks"));
+
+  // const addMorningTask = (task) => {
+  //   morningTasks.push(task);
+  // };
 
   return (
     <div className="morningCards">
-      {morningTodos.map((todo, i) => (
+      {savedTasks.map((todo, i) => (
         <>
           <div className="morningTodo" key={i}>
             {todo}
           </div>
-          {i < morningTodos.length - 1 && <img src={arrow} alt="" />}
+          {i < morningTasks.length - 1 && <img src={arrow} alt="" />}
         </>
       ))}
+      <button>
+        {
+          <img
+            src={add}
+            alt=""
+            onClick={() => {
+              setInputIsOpen(true);
+            }}
+          />
+        }
+      </button>
+      {inputIsOpen && <Input />}
     </div>
   );
 };

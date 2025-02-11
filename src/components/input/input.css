@@ -1,16 +1,9 @@
-.morningCards {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  width: 100%;
-  gap: 10px;
-}
-
-.morningTodo {
+.morningInput {
   display: flex;
   align-items: center;
   justify-content: center;
   color: rgb(82, 82, 82);
+  font-family: "Zen Kurenaido", serif;
   font-size: 18px;
   text-align: center;
   padding: 20px 6px;
@@ -19,8 +12,4 @@
   background-color: #ffcd29;
   padding: 5px;
   border-radius: 4px;
-}
-
-.addButton {
-  background-color: aliceblue;
 }
