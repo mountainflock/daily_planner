@@ -1,8 +1,6 @@
 import "./morningBoard.css";
 import arrow from "../../assets/arrow.svg";
 import add from "../../assets/add.svg";
-import Input from "../input/input";
-
 import { useState } from "react";
 
 const MorningCardList = () => {
@@ -52,7 +50,7 @@ const MorningCardList = () => {
           />
         }
       </button>
-      {inputIsOpen && <Input />}
+      {inputIsOpen && <input className="morningInput" type="text" />}
     </div>
   );
 };
