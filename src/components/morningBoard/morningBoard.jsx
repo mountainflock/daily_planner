@@ -25,9 +25,9 @@ const MorningCardList = () => {
   localStorage.setItem("morningTasks", JSON.stringify(morningTasks));
   const savedTasks = JSON.parse(localStorage.getItem("morningTasks"));
 
-  // const addMorningTask = (task) => {
-  //   morningTasks.push(task);
-  // };
+  const addMorningTask = (task) => {
+    morningTasks.push(task);
+  };
 
   return (
     <div className="morningCards">
@@ -50,7 +50,13 @@ const MorningCardList = () => {
           />
         }
       </button>
-      {inputIsOpen && <input className="morningInput" type="text" />}
+      {inputIsOpen && (
+        <input
+          className="morningInput"
+          type="text"
+          onKeyDown={addMorningTask}
+        />
+      )}
     </div>
   );
 };
