@@ -6,21 +6,22 @@ import { useState } from "react";
 const MorningCardList = () => {
   // const [morningTasks, setMorningTasks] = useState(savedTasks);
   const [inputIsOpen, setInputIsOpen] = useState(false);
-  const morningTasks = ["Пробуждение"];
-
-  // "Вода",
-  //   "6 минут",
-  //   "Молитва",
-  //   "Фото",
-  //   "Постель",
-  //   "Переодеваюсь",
-  //   "Умываюсь",
-  //   "Зарядка",
-  //   "Завтрак",
-  //   "Душ",
-  //   "Ревитоника",
-  //   "Отдых, медитация",
-  //   "Планер",
+  const morningTasks = [
+    "Пробуждение",
+    "Вода",
+    "6 минут",
+    "Молитва",
+    "Фото",
+    "Постель",
+    "Переодеваюсь",
+    "Умываюсь",
+    "Зарядка",
+    "Завтрак",
+    "Душ",
+    "Ревитоника",
+    "Отдых, медитация",
+    "Планер",
+  ];
 
   localStorage.setItem("morningTasks", JSON.stringify(morningTasks));
   const savedTasks = JSON.parse(localStorage.getItem("morningTasks"));

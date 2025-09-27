@@ -10,15 +10,19 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: rgb(82, 82, 82);
-  font-size: 18px;
+  color: rgb(0, 0, 0);
+  font-size: 20px;
   text-align: center;
   padding: 20px 6px;
   height: 40px;
   width: 150px;
-  background-color: #ffcd29;
+  background-color: #fbfbfb;
   padding: 5px;
   border-radius: 4px;
+}
+
+.morningTodo:hover {
+  background-color: #fdf7e0;
 }
 
 .morningInput {
