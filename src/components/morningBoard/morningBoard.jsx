@@ -7,20 +7,16 @@ const MorningCardList = () => {
   // const [morningTasks, setMorningTasks] = useState(savedTasks);
   const [inputIsOpen, setInputIsOpen] = useState(false);
   const morningTasks = [
-    "Пробуждение",
     "Вода",
     "6 минут",
-    "Молитва",
-    "Фото",
     "Постель",
     "Переодеваюсь",
     "Умываюсь",
-    "Зарядка",
     "Завтрак",
+    "Тренировка",
     "Душ",
     "Ревитоника",
-    "Отдых, медитация",
-    "Планер",
+    "Планирование дня",
   ];
 
   localStorage.setItem("morningTasks", JSON.stringify(morningTasks));
