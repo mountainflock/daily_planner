@@ -30,17 +30,21 @@ const DailyTasks = () => {
           className={task.isDone === false ? "incompleteTask" : "completeTask"}
         >
           {task.isDone === true ? (
-            <img
-              src={radioButtonChecked}
-              alt=""
-              onClick={() => toggleTaskStatus(task.id)}
-            />
+            <div className="checkButtonDiv">
+              <img
+                src={radioButtonChecked}
+                alt=""
+                onClick={() => toggleTaskStatus(task.id)}
+              />
+            </div>
           ) : (
-            <img
-              src={radioButtonUnchecked}
-              alt=""
-              onClick={() => toggleTaskStatus(task.id)}
-            />
+            <div className="checkButtonDiv">
+              <img
+                src={radioButtonUnchecked}
+                alt=""
+                onClick={() => toggleTaskStatus(task.id)}
+              />
+            </div>
           )}
           <div className="taskTitle">{task.title}</div>
         </div>

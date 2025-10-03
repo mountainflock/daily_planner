@@ -4,6 +4,10 @@ p {
   font-size: 22px;
 }
 
+img {
+  height: 20px;
+}
+
 .dailyTasks {
   display: flex;
   flex-direction: column;
@@ -40,6 +44,11 @@ p {
 
 .completeTask {
   text-decoration: line-through;
+}
+
+.checkButtonDiv {
+  display: flex;
+  align-items: center;
 }
 
 .addButton {
