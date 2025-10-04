@@ -44,3 +44,8 @@
 .addButton {
   background-color: aliceblue;
 }
+
+.arrowDiv {
+  display: flex;
+  align-items: center;
+}

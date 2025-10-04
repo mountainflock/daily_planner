@@ -22,3 +22,8 @@
 .eveningTodo:hover {
   background-color: #f8f3ff;
 }
+
+.arrowDiv {
+  display: flex;
+  align-items: center;
+}

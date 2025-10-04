@@ -18,7 +18,11 @@ const EveningCardList = () => {
           <div className="eveningTodo" key={eveningTodos[i]}>
             {todo}
           </div>
-          {i < eveningTodos.length - 1 && <img src={arrow} alt="" />}
+          {i < eveningTodos.length - 1 && (
+            <div className="arrowDiv">
+              <img src={arrow} alt="" />
+            </div>
+          )}
         </>
       ))}
     </div>

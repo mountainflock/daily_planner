@@ -33,7 +33,11 @@ const MorningCardList = () => {
           <div className="morningTodo" key={i}>
             {todo}
           </div>
-          {i < morningTasks.length - 1 && <img src={arrow} alt="" />}
+          {i < morningTasks.length - 1 && (
+            <div className="arrowDiv">
+              <img src={arrow} alt="" />
+            </div>
+          )}
         </>
       ))}
       <button>
