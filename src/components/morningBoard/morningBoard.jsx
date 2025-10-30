@@ -4,9 +4,7 @@ import add from "../../assets/add.svg";
 import { useState } from "react";
 
 const MorningCardList = () => {
-  // const [morningTasks, setMorningTasks] = useState(savedTasks);
-  const [inputIsOpen, setInputIsOpen] = useState(false);
-  const morningTasks = [
+  const tasks = [
     "Вода",
     "6 минут",
     "Постель",
@@ -18,12 +16,15 @@ const MorningCardList = () => {
     "Ревитоника",
     "Планирование дня",
   ];
+  const [morningTasks, setMorningTasks] = useState(tasks);
+  const [inputIsOpen, setInputIsOpen] = useState(false);
 
   localStorage.setItem("morningTasks", JSON.stringify(morningTasks));
   const savedTasks = JSON.parse(localStorage.getItem("morningTasks"));
 
   const addMorningTask = (task) => {
-    morningTasks.push(task);
+    setMorningTasks(...task);
+    console.log(morningTasks);
   };
 
   return (
@@ -52,11 +53,13 @@ const MorningCardList = () => {
         }
       </button>
       {inputIsOpen && (
-        <input
-          className="morningInput"
-          type="text"
-          onKeyDown={addMorningTask}
-        />
+        <form>
+          {" "}
+          <input className="morningInput" type="text" />
+          <button type="submit" onClick={addMorningTask}>
+            save
+          </button>
+        </form>
       )}
     </div>
   );

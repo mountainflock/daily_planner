@@ -3,6 +3,7 @@ import radioButtonChecked from "../../assets/radioButtonChecked.svg";
 import add from "../../assets/add.svg";
 import "./todayTasks.css";
 import { useState } from "react";
+import DailyTaskInput from "../dailyTaskInput/dailyTaskInput";
 
 const DailyTasks = () => {
   const [dailyTasks, setDailyTasks] = useState([
@@ -29,7 +30,7 @@ const DailyTasks = () => {
           key={i}
           className={task.isDone === false ? "incompleteTask" : "completeTask"}
         >
-          {task.isDone === true ? (
+          {task.isDone ? (
             <div className="checkButtonDiv">
               <img
                 src={radioButtonChecked}
@@ -46,7 +47,9 @@ const DailyTasks = () => {
               />
             </div>
           )}
-          <div className="taskTitle">{task.title}</div>
+          <div className="taskTitle">
+            <DailyTaskInput />
+          </div>
         </div>
       ))}
       <div className="taskButtons">
