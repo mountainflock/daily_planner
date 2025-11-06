@@ -1,7 +1,8 @@
 import { useState } from "react";
+import PropTypes from "prop-types";
 
-const DailyTaskInput = () => {
-  const [currentTask, setCurrentTask] = useState("");
+const DailyTaskInput = ({ title }) => {
+  const [currentTask, setCurrentTask] = useState(title);
   const [editing, setEditing] = useState(false);
 
   const handleClick = () => {
@@ -29,6 +30,10 @@ const DailyTaskInput = () => {
       )}
     </>
   );
+};
+
+DailyTaskInput.propTypes = {
+  title: PropTypes.string.isRequired,
 };
 
 export default DailyTaskInput;

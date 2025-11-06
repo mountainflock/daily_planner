@@ -48,7 +48,7 @@ const DailyTasks = () => {
             </div>
           )}
           <div className="taskTitle">
-            <DailyTaskInput />
+            <DailyTaskInput title={task.title} />
           </div>
         </div>
       ))}
