@@ -22,6 +22,15 @@ const DailyTasks = () => {
     );
   };
 
+  const addDailyTask = (title) => {
+    setDailyTasks((prevState) => [
+      ...prevState,
+      { id: 5, title, isDone: false },
+    ]);
+  };
+
+  //сделать инпут для добавления нового задания на день
+
   return (
     <div className="dailyTasks">
       <p>Задачи на день</p>
@@ -53,7 +62,9 @@ const DailyTasks = () => {
         </div>
       ))}
       <div className="taskButtons">
-        <button className="addButton">{<img src={add} alt="" />}</button>
+        <button className="addButton" onClick={addDailyTask}>
+          {<img src={add} alt="" />}
+        </button>
         <button className="deleteCompletedButton">удалить завершенные</button>
       </div>
     </div>
