@@ -1,5 +1,5 @@
-import radioButtonUnchecked from "../../assets/radioButtonUnchecked.svg";
-import radioButtonChecked from "../../assets/radioButtonChecked.svg";
+// import radioButtonUnchecked from "../../assets/radioButtonUnchecked.svg";
+// import radioButtonChecked from "../../assets/radioButtonChecked.svg";
 import add from "../../assets/add.svg";
 import "./todayTasks.css";
 import { useState } from "react";
@@ -14,13 +14,13 @@ const DailyTasks = () => {
     { id: 4, title: "Task 5", isDone: false },
   ]);
 
-  const toggleTaskStatus = (id) => {
-    setDailyTasks((previousTasks) =>
-      previousTasks.map((task) =>
-        task.id === id ? { ...task, isDone: !task.isDone } : task
-      )
-    );
-  };
+  // const toggleTaskStatus = (id) => {
+  //   setDailyTasks((previousTasks) =>
+  //     previousTasks.map((task) =>
+  //       task.id === id ? { ...task, isDone: !task.isDone } : task
+  //     )
+  //   );
+  // };
 
   const addDailyTask = (title) => {
     setDailyTasks((prevState) => [
@@ -39,19 +39,19 @@ const DailyTasks = () => {
         >
           {task.isDone ? (
             <div className="checkButtonDiv">
-              <img
+              {/* <img
                 src={radioButtonChecked}
                 alt=""
                 onClick={() => toggleTaskStatus(task.id)}
-              />
+              /> */}
             </div>
           ) : (
             <div className="checkButtonDiv">
-              <img
+              {/* <img
                 src={radioButtonUnchecked}
                 alt=""
                 onClick={() => toggleTaskStatus(task.id)}
-              />
+              /> */}
             </div>
           )}
           <div className="taskTitle">
