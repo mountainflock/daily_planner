@@ -3,7 +3,7 @@ import radioButtonChecked from "../../assets/radioButtonChecked.svg";
 import add from "../../assets/add.svg";
 import "./todayTasks.css";
 import { useState } from "react";
-import DailyTaskInput from "../dailyTaskInput/dailyTaskInput";
+import TodayTaskInput from "../dailyTaskInput/todayTaskInput";
 
 const DailyTasks = () => {
   const [dailyTasks, setDailyTasks] = useState([
@@ -28,8 +28,6 @@ const DailyTasks = () => {
       { id: 5, title, isDone: false },
     ]);
   };
-
-  //сделать инпут для добавления нового задания на день
 
   return (
     <div className="dailyTasks">
@@ -57,7 +55,7 @@ const DailyTasks = () => {
             </div>
           )}
           <div className="taskTitle">
-            <DailyTaskInput title={task.title} />
+            <TodayTaskInput title={task.title} isDone={task.isDone} />
           </div>
         </div>
       ))}

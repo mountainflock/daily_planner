@@ -1,20 +1,21 @@
 import { useState } from "react";
 import PropTypes from "prop-types";
-import "./dailyTaskInput.css";
+import "./todayTaskInput.css";
 
-const DailyTaskInput = ({ title }) => {
+const TodayTaskInput = ({ title, isDone }) => {
   const [currentTask, setCurrentTask] = useState(title);
   const [editing, setEditing] = useState(false);
 
   const handleClick = () => {
-    setEditing(true);
+    if (!isDone) setEditing(true);
   };
 
   const handleChange = (e) => {
     setCurrentTask(e.target.value);
   };
 
-  const handleBlur = () => {
+  const handleBlur = (e) => {
+    setCurrentTask(e.target.value);
     setEditing(false);
   };
 
@@ -38,8 +39,9 @@ const DailyTaskInput = ({ title }) => {
   );
 };
 
-DailyTaskInput.propTypes = {
+TodayTaskInput.propTypes = {
   title: PropTypes.string.isRequired,
+  isDone: PropTypes.bool.isRequired,
 };
 
-export default DailyTaskInput;
+export default TodayTaskInput;
