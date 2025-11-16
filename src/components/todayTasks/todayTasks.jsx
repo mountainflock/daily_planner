@@ -1,69 +1,65 @@
-// import radioButtonUnchecked from "../../assets/radioButtonUnchecked.svg";
-// import radioButtonChecked from "../../assets/radioButtonChecked.svg";
-import add from "../../assets/add.svg";
+// import add from "../../assets/add.svg";
 import "./todayTasks.css";
 import { useState } from "react";
 import TodayTaskInput from "../dailyTaskInput/todayTaskInput";
+import { v4 as uuidv4 } from "uuid";
 
 const DailyTasks = () => {
   const [dailyTasks, setDailyTasks] = useState([
-    { id: 0, title: "Task 1", isDone: false },
-    { id: 1, title: "Task 2", isDone: false },
-    { id: 2, title: "Task 3", isDone: false },
-    { id: 3, title: "Task 4", isDone: false },
-    { id: 4, title: "Task 5", isDone: false },
+    { id: uuidv4(), title: "Task 1", isDone: false, isEditing: false },
+    { id: uuidv4(), title: "Task 2", isDone: false, isEditing: false },
+    { id: uuidv4(), title: "Task 3", isDone: false, isEditing: false },
+    { id: uuidv4(), title: "Task 4", isDone: false, isEditing: false },
+    { id: uuidv4(), title: "Task 5", isDone: false, isEditing: false },
   ]);
 
-  // const toggleTaskStatus = (id) => {
-  //   setDailyTasks((previousTasks) =>
-  //     previousTasks.map((task) =>
-  //       task.id === id ? { ...task, isDone: !task.isDone } : task
-  //     )
-  //   );
-  // };
-
-  const addDailyTask = (title) => {
+  const addDailyTask = () => {
     setDailyTasks((prevState) => [
       ...prevState,
-      { id: 5, title, isDone: false },
+      { id: uuidv4(), title: "", isDone: false, isEditing: true },
     ]);
   };
+
+  const handleEdit = (id) => {
+    setDailyTasks((prevState) =>
+      prevState.map((item) =>
+        item.id === id ? { ...item, isEditing: true } : item
+      )
+    );
+  };
+  const handleSave = (id, newTitle) => {
+    setDailyTasks((prevState) =>
+      prevState.map((item) =>
+        item.id === id ? { ...item, title: newTitle, isEditing: false } : item
+      )
+    );
+  };
+
+  const deleteCompletedTasks = () => {};
 
   return (
     <div className="dailyTasks">
       <p>Задачи на день</p>
-      {dailyTasks.map((task, i) => (
-        <div
-          key={i}
-          className={task.isDone === false ? "incompleteTask" : "completeTask"}
-        >
-          {task.isDone ? (
-            <div className="checkButtonDiv">
-              {/* <img
-                src={radioButtonChecked}
-                alt=""
-                onClick={() => toggleTaskStatus(task.id)}
-              /> */}
-            </div>
-          ) : (
-            <div className="checkButtonDiv">
-              {/* <img
-                src={radioButtonUnchecked}
-                alt=""
-                onClick={() => toggleTaskStatus(task.id)}
-              /> */}
-            </div>
-          )}
-          <div className="taskTitle">
-            <TodayTaskInput title={task.title} isDone={task.isDone} />
-          </div>
+      {dailyTasks.map((task) => (
+        <div className="taskTitle" key={task.id}>
+          <TodayTaskInput
+            task={task}
+            handleEdit={handleEdit}
+            handleSave={handleSave}
+          />
         </div>
       ))}
       <div className="taskButtons">
         <button className="addButton" onClick={addDailyTask}>
-          {<img src={add} alt="" />}
+          fjeorwifj
+          {/* {<img src={add} alt="" />} */}
         </button>
-        <button className="deleteCompletedButton">удалить завершенные</button>
+        <button
+          className="deleteCompletedButton"
+          onClick={deleteCompletedTasks}
+        >
+          удалить завершенные
+        </button>
       </div>
     </div>
   );
